@@ -1,4 +1,4 @@
-module github.com/free5gc/MongoDBLibrary
+module github.com/vigneshblossoms/MongoDBLibrary
 
 go 1.14
 

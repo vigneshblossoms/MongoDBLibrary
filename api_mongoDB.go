@@ -10,7 +10,7 @@ import (
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
 
-	"github.com/free5gc/MongoDBLibrary/logger"
+	"github.com/vigneshblossoms/MongoDBLibrary/logger"
 )
 
 var Client *mongo.Client = nil
