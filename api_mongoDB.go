@@ -13,7 +13,6 @@ import (
 	"github.com/vigneshblossoms/MongoDBLibrary/logger"
 
 	//vignesh
-	"go.mongodb.org/mongo-driver/bson/primitive"
 )
 
 var Client *mongo.Client = nil
@@ -258,7 +257,7 @@ func RestfulAPIPostMany(collName string, filter bson.M, postDataArray []interfac
 func BulkInsert(collName string, models []mongo.WriteModel) bool {
 	collection := Client.Database(dbName).Collection(collName)
 	opts := options.BulkWrite().SetOrdered(false)
-	res,err := collection.BulkWrite(context.TODO(), models, opts)
+	collection.BulkWrite(context.TODO(), models, opts)
 	return false
 
 }
